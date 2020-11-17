@@ -8,14 +8,19 @@ with other applications.
 >>> https://github.com/asweigart/pyautogui 
 '''
 
-# Sets a 2 second pause after each PyAutoGUI call:
-pyautogui.PAUSE = 2
+def do_not_sleep():
+    # Sets a 2 second pause after each PyAutoGUI call:
+    pyautogui.PAUSE = 1
 
-# How manu pixels PyAutoGUI will use to move in screen
-pixel = 200
+    # How manu pixels PyAutoGUI will use to move in screen
+    pixel = 20
 
-while True:
-    pixel *= -1 # move 200 pixels in opposite directions 
-    pyautogui.moveRel(0, pixel, duration=5) # duration = speed of mouse movement
+    pyautogui.confirm('Hit "Ok" and sit back and relax: I gotcha ;)')
 
-# End program by control + c via CLI
+    while True:
+        pixel *= -1 # move pixel in opposite directions 
+        pyautogui.moveRel(0, pixel, duration=1) # duration = speed of mouse movement
+    
+
+do_not_sleep()
+
