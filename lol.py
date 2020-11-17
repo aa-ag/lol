@@ -9,10 +9,10 @@ with other applications.
 '''
 
 def do_not_sleep():
-    # Sets a 2 second pause after each PyAutoGUI call:
-    pyautogui.PAUSE = 1
+    # Sets a 3 second pause after each PyAutoGUI call:
+    pyautogui.PAUSE = 3
 
-    # How manu pixels PyAutoGUI will use to move in screen
+    # How many pixels PyAutoGUI will use to move in screen
     pixel = 20
 
     pyautogui.confirm('Hit "Ok" and sit back and relax: I gotcha ;)')
